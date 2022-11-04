@@ -4,9 +4,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surf Forecast</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+    rel="stylesheet"
+  />
+    <title>Surf Report</title>
 </head>
+
 <body>
-    
+    <header id="jumbotron" >
+        <h1 class="display-4">Surf Report</h1>
+        <p class="h3">Check out your local Surf Report <i class='fas fa-swimmer' style='font-size:24px'></i></p>
+        <p id="currentDay" class="h4"></p>
+        <p id="currentTime" class="h5"></p>
+
+      </header>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3 bg-light">
+            <!-- creating the search bar to look up cities -->
+            <h4 id="searchBar">Search for a City</h4>
+            <!-- create the text box to capture the search city name -->
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="search-city" aira-label="City Search" aria-describedby="search-button">
+                <div class="input-group-append">
+                  <button class="btn bg-primary text-light" id="search-button"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+         <!-- section for search city history -->
+          <button class="btn btn-primary" type="button" id="clear-history">Clear History</button>
+          <ul class="list-group">
+
+          </ul>
+        </div>
+        <div class="col-sm-8" >
+          <!-- Row for future data to be stored here -->
+            <div class="row text-light">
+              <div class="col-md-3 bg-primary" id="wave-info">
+                <h5 class="text-center">Wave Height:</h5>
+                <p>in ft</p>
+                <p>more info </p>
+            
+              </div>
+              
+              <div class="col-md-3 bg-primary" id="wave-info">
+                <h5 class="text-center">Swell:</h5>
+                <p>in ft</p>
+                <p>more info</p>
+        
+              </div>
+              <div class="col-md-3 bg-primary" id="wave-info">
+                <h5 class="text-center">Water Temperature:</h5>
+                <p>in F:</p>
+                <p>more info:</p>
+              </div>
+        
+
+            </div>
+          </div>
+          <div class="col-sm-12" id="tide-info">
+            <h3>5-Day Tide Forecast:</h3>
+          <div class="row ml-2" id="current-w-container">
+            <div class="col-sm-12" id="current-weather">
+              <h3 class="city-name mb-1 mt-2 bolder" id="current-city"></h3>
+              <p>Temperature: <span class="current" id="temperature"></span></p>
+              <p>Humidity:<span class="current" id="humidity"></span></p>
+              <p>Wind Speed:<span class="current" id="wind-speed"></span></p>
+            </div>
+          </div>
+        </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/script.js"></script>
 </body>
 </html>
