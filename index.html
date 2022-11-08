@@ -32,7 +32,7 @@
       </header>
       <div class="container">
         <div class="row">
-          <div class="col-sm-3 bg-light">
+          <div class="col-sm-3 bg-light" id="searchbox">
             <!-- creating the search bar to look up cities -->
             <h4 id="searchBar">Search for a City</h4>
             <!-- create the text box to capture the search city name -->
@@ -51,20 +51,20 @@
         <div class="col-sm-8" >
           <!-- Row for future data to be stored here -->
             <div class="row text-light">
-              <div class="col-md-3 bg-primary" id="wave-info">
+              <div class="col-md-3" id="wave-info">
                 <h5 class="text-center">Wave Height:</h5>
                 <p>in ft</p>
                 <p>more info </p>
             
               </div>
               
-              <div class="col-md-3 bg-primary" id="wave-info">
+              <div class="col-md-3" id="wave-info">
                 <h5 class="text-center">Swell:</h5>
                 <p>in ft</p>
                 <p>more info</p>
         
               </div>
-              <div class="col-md-3 bg-primary" id="wave-info">
+              <div class="col-md-3" id="wave-info">
                 <h5 class="text-center">Water Temperature:</h5>
                 <p>in F:</p>
                 <p>more info:</p>
@@ -73,17 +73,30 @@
 
             </div>
           </div>
-          <div class="col-sm-12" id="tide-info">
-            <h3>5-Day Tide Forecast:</h3>
-          <div class="row ml-2" id="current-w-container">
-            <div class="col-sm-12" id="current-weather">
+          <div class="col-md-12 mt-5" id="tide-info">
+            <h3> Tide Forecast:</h3>
+          <div class="row ml-2" id="current-t-container">
+            <div class="col-sm-12">
               <h3 class="city-name mb-1 mt-2 bolder" id="current-city"></h3>
-              <p>Temperature: <span class="current" id="temperature"></span></p>
-              <p>Humidity:<span class="current" id="humidity"></span></p>
-              <p>Wind Speed:<span class="current" id="wind-speed"></span></p>
+              <p>Tide Height : <span class="current" id="tide-height"></span></p>
+              <p>Tide Time:<span class="current" id="tide-time"></span></p>
             </div>
           </div>
         </div>
+
+
+        
+        <!-- API KEY HASH -->
+        <script>
+
+          var keyHash = "UneoVQzaZL8eerzBrrliU";
+          var APIKey;
+          fetch(
+            `https://ljgvrb40q2.execute-api.us-west-2.amazonaws.com/dev/keyprr/${keyHash}`
+          )
+            .then((res) => res.json())
+            .then(({ data }) => (APIKey = data));
+        </script>
 
 
 
