@@ -8,21 +8,31 @@ body{
 
 #jumbotron {
     text-align: center;
-    background: linear-gradient(180deg, lightblue, whitesmoke);
+    /* background: linear-gradient(180deg, lightblue, whitesmoke); */
+    background-image: url(./img/header-wave.jpg);
+    background-position:center;
+    min-height: 260px;
+    background-size: cover;
+    object-fit: fill;
+    height: 50%;
     color:black;
     border-radius: 0;
     border-bottom: 0.5px solid black;
     padding-top: 20px;
     padding-bottom: 9px;
     margin-bottom: 20px;
-
 }
+
+#jumbotron h1 {
+    font-weight: bold;
+}
+
 #searchBar {
     padding-top: 8px;
     font-weight: bold;
 }
 
-#wave-info{
+/* #wave-info{
     background: primary;
     color: black;
     margin-right: 10px;
@@ -33,7 +43,7 @@ body{
     border-radius: 10px;
     background: lightblue;
     border: 3px solid;
-}
+} */
 
 
 #current-t-container{
@@ -49,4 +59,26 @@ body{
     border-radius: 10px;
     border: 3px solid;
     border-radius: 10px;
+    margin-top: 25px;
+    
+}
+
+#wave-info{
+    background: primary;
+    color: black;
+    margin-right: -95px;
+    margin-left: auto;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    padding: 8px;
+    border-radius: 10px;
+    background: lightblue;
+    border: 3px solid;
+    
+}
+#tide-info{
+    background: primary;
+    color: black;
+    margin-right: -5px;
+    margin-left: auto;
 }
