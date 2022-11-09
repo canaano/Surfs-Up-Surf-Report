@@ -64,21 +64,37 @@ body{
 }
 
 #wave-info{
-    background: primary;
     color: black;
-    margin-right: -95px;
+    margin-top: 30px;
+    margin-right: -110px;
     margin-left: auto;
-    margin-bottom: 10px;
-    margin-top: 25px;
-    padding: 8px;
-    border-radius: 10px;
-    background: lightblue;
-    border: 3px solid;
-    
-}
+    min-width:33%;
+   }
+   
+   #wave-info-inner{
+       background: primary;
+       color: black;
+       margin-right: 0px;
+       margin-left: auto;
+       margin-bottom: 10px;
+       padding: 8px;
+       border-radius: 10px;
+       background: lightblue;
+       border: 3px solid;
+   }
+
 #tide-info{
     background: primary;
     color: black;
     margin-right: -5px;
     margin-left: auto;
+}
+
+#title-wave{
+    text-align: center;
+    margin-left: 200px;
+}
+
+#title-tide{
+    text-align: center;
 }
