@@ -24,10 +24,13 @@
 
 <body>
     <header id="jumbotron" >
-        <h1 class="display-4">Surf Report</h1>
-        <p class="h3"><strong>Check out your local Surf Report</strong> <i class='fas fa-swimmer' style='font-size:24px'></i></p>
-        <p id="currentDay" class="h4"></p>
+      <!-- try to hight light just the words not the whole row -->
+      <div>
+        <h1 class="display-4" id="title">Surf Report</h1>
+        <p class="h3" id="title"><strong>Check out your local Surf Report</strong> <i class='fas fa-swimmer' style='font-size:24px'></i></p>
+        <p id="currentDay" class="h4"></p>  
         <p id="currentTime" class="h5"></p>
+      </div>
 
       </header>
       <div class="container">
@@ -52,27 +55,37 @@
           </ul>
         </div>
 
-            <div class="col-md-3" id="wave-info">
-              <h5 class="text-center">Wave Height:</h5>
-                <p id="wave-height">ft</p>
-                <p>more info </p>
-              </div>
-              
-              <div class="col-md-3" id="wave-info">
-                <h5 class="text-center">Wind:</h5>
-                <p id="wind-speed">MPH</p>
-                <p>more info</p>
-              </div>
+        <!-- add box for 'photo of the day' -->
+        <div class="flex-container" id="photo">
+          <p>photo</p>
+        </div>
 
+          <div class="col-sm-8">
+            <div class="col-md-3" id="wave-info">
+              <h5 class="text-center">Wave-Data <img src="./assets/img/swell.png" alt="Wave" width="65px" height="65px"></h5>
+              <div id="wave-info-inner"> 
+                <p class="text-left" id="wave-height">Height: </p>
+                <!-- <p>more info </p> -->
+              </div>
+            </div>
+            
               <div class="col-md-3" id="wave-info">
-                <h5 class="text-center">Water Temperature:</h5>
-                <p id="temp">deg</p>
-                <p>more info:</p>
+                <h5 class="text-center">Wind-Data <img src="./assets/img/wind.png" alt="Wind" width="65px" height="65px"></h5>
+                <div id="wave-info-inner">
+                  <p class="text-left" id="wind-speed">Speed: </p>
+                  <p class="text-left" id="windDir">Direction: </p>
                 </div>
               </div>
 
+              <div class="col-md-3" id="wave-info">
+                <h5 class="text-center">Water-Data <img src="./assets/img/water temp.png" alt="Temperature" width="65px" height="65px"></h5>
+                <div id="wave-info-inner">
+                  <p class="text-left" id="temp">Temperature: </p>
+                  <!-- <p>more info:</p> -->
+                </div>
+                </div>
             </div>
-
+            </div>
         </div>
 
         <div class="col-sm-8 mt-5" id="sun-info">
@@ -80,14 +93,15 @@
             <div class="row text-light">
 
             <div class="col-md-5" id="sun-container">
-              <h5 class="text-center">Sunrise: </h5>
+              <h5 class="text-center">Sunrise <img src="./assets/img/sunrise.png" alt="Sunrise" width="75px" height="75px"> </h5>
+             
               <div id="sun-info-inner">
               <p id="sunrise">TIME</p>
               <p></p>
               </div>          
             </div>
             <div class="col-md-5" id="sun-container">
-              <h5 class="text-center">Sunset:</h5>
+              <h5 class="text-center">Sunset <img src="./assets/img/sunset.png" alt="Sunset" width="75px" height="75px"></h5>
               <div id="sun-info-inner">
               <p id="sunset">TIME</p>
               <p></p>
@@ -101,12 +115,12 @@
         <script>
 
           var keyHash = "UneoVQzaZL8eerzBrrliU";
-          var APIKey;
+          var API_Key;
           fetch(
             `https://ljgvrb40q2.execute-api.us-west-2.amazonaws.com/dev/keyprr/${keyHash}`
           )
             .then((res) => res.json())
-            .then(({ data }) => (APIKey = data));
+            .then(({ data }) => (API_Key = data));
         </script>
 
 

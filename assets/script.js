@@ -71,13 +71,13 @@ $(document).ready(function() {
         const cityName = $('#search-input').val();
         const latlon = await searchForCity(cityName);
         const forecastResult = await getForecast(latlon.lat , latlon.lon);
-        const waveHeight = forecastResult.data.weather[0].hourly[2].swellHeight_ft
+        const waveHeight = "Height: "+forecastResult.data.weather[0].hourly[2].swellHeight_ft + " Ft"
         $('#wave-height').text(waveHeight);
-        const windspeed = forecastResult.data.weather[0].hourly[2].windspeedMiles
+        const windspeed = "Speed: "+forecastResult.data.weather[0].hourly[2].windspeedMiles + " MPH"
         $('#wind-speed').text(windspeed);
-        const windDir = forecastResult.data.weather[0].hourly[2].swellDir16Point
+        const windDir = "Direction: "+forecastResult.data.weather[0].hourly[2].swellDir16Point
         $('#windDir').text(windDir);
-        const temp = forecastResult.data.weather[0].hourly[2].tempF
+        const temp = "Temperature: "+forecastResult.data.weather[0].hourly[2].tempF + " °F"
         $('#temp').text(temp);
         const sunrise = forecastResult.data.weather[0].astronomy[0].sunrise
         $('#sunrise').text(sunrise);
