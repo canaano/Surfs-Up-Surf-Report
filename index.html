@@ -48,13 +48,14 @@
 
           </ul>
         </div>
+
         <div class="col-sm-8" >
-          <!-- Row for future data to be stored here -->
+          <!-- boxes that will hold our heigh, wind and temp info -->
           <h3 id="title-wave"> Wave Forecast:</h3>
             <div class="row text-light">
 
               <div class="col-md-3" id="wave-info">
-                <h5 class="text-center">Wave Height: <br/>&nbsp</h5>
+                <h5 class="text-center">Wave Height: </h5>
                 <div id="wave-info-inner">
                 <p>in ft</p>
                 <p>more info </p>  
@@ -62,7 +63,7 @@
               </div>
               
               <div class="col-md-3" id="wave-info">
-                <h5 class="text-center">Swell: <br/>&nbsp </h5>
+                <h5 class="text-center">Swell:</h5>
                 <div id="wave-info-inner">
                 <p>in ft</p>
                 <p>more info</p>       
@@ -70,7 +71,7 @@
               </div>
 
               <div class="col-md-3" id="wave-info">
-                <h5 class="text-center">Water Temperature: <br/>&nbsp </h5>
+                <h5 class="text-center">Water Temperature:</h5>
                 <div id="wave-info-inner">
                 <p>in F:</p>
                 <p>more info:</p>
@@ -81,16 +82,25 @@
 
         </div>
 
-        <div class="col-md-8 mt-5" id="tide-info">
-            <h3 id="title-tide"> Tide Forecast:</h3>
-          <div class="row ml-2" id="current-t-container">
-            <div class="col-sm-12">
-              <h3 class="city-name mb-1 mt-2 bolder" id="current-city"></h3>
-              <p>Tide Height : <span class="current" id="tide-height"></span></p>
-              <p>Tide Time:<span class="current" id="tide-time"></span></p>
+        <div class="col-sm-8 mt-5" id="sun-info">
+            <!-- <h3 id="title-tide"> Tide Forecast:</h3> -->
+            <div class="row text-light">
+
+            <div class="col-md-5" id="sun-container">
+              <h5 class="text-center">Sunrise: </h5>
+              <div id="sun-info-inner">
+              <p id="sunrise">TIME</p>
+              <p></p>
+              </div>          
             </div>
-          </div>
-        </div>
+            <div class="col-md-5" id="sun-container">
+              <h5 class="text-center">Sunset:</h5>
+              <div id="sun-info-inner">
+              <p id="sunset">TIME</p>
+              <p></p>
+              
+              </div>          
+            </div>
 
 
         
