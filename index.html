@@ -37,10 +37,13 @@
             <h4 id="searchBar">Search for a City</h4>
             <!-- create the text box to capture the search city name -->
             <div class="input-group mb-3">
-                <input type="text" class="form-control" id="search-city" aira-label="City Search" aria-describedby="search-button">
+                <input type="text" class="form-control" id="search-input" aira-label="City Search" aria-describedby="search-button">
                 <div class="input-group-append">
                   <button class="btn bg-primary text-light" id="search-button"><i class="fa fa-search"></i></button>
                 </div>
+                <ul id="search-history">
+                  <!-- dynamic list of cities from localstorage-->
+                </ul>
             </div>
          <!-- section for search city history -->
           <button class="btn btn-primary" type="button" id="clear-history">Clear History</button>
@@ -49,31 +52,21 @@
           </ul>
         </div>
 
-        <div class="col-sm-8" >
-          <!-- boxes that will hold our heigh, wind and temp info -->
-          <h3 id="title-wave"> Wave Forecast:</h3>
-            <div class="row text-light">
-
-              <div class="col-md-3" id="wave-info">
-                <h5 class="text-center">Wave Height: </h5>
-                <div id="wave-info-inner">
-                <p>in ft</p>
-                <p>more info </p>  
-                </div>          
+            <div class="col-md-3" id="wave-info">
+              <h5 class="text-center">Wave Height:</h5>
+                <p id="wave-height">ft</p>
+                <p>more info </p>
               </div>
               
               <div class="col-md-3" id="wave-info">
-                <h5 class="text-center">Swell:</h5>
-                <div id="wave-info-inner">
-                <p>in ft</p>
-                <p>more info</p>       
-                </div>
+                <h5 class="text-center">Wind:</h5>
+                <p id="wind-speed">MPH</p>
+                <p>more info</p>
               </div>
 
               <div class="col-md-3" id="wave-info">
                 <h5 class="text-center">Water Temperature:</h5>
-                <div id="wave-info-inner">
-                <p>in F:</p>
+                <p id="temp">deg</p>
                 <p>more info:</p>
                 </div>
               </div>
