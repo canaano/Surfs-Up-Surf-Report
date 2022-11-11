@@ -84,7 +84,7 @@ body {
   background-position: center;
 }
 
-/* #wave-info-inner {
+#wave-info-inner {
   background: primary;
   color: black;
   margin-right: 10px;
@@ -94,7 +94,7 @@ body {
   border-radius: 10px;
   background: lightblue;
   border: 3px solid;
-  text-align: center; 
+  text-align: center;
 }
 
 #sun-container {
@@ -102,7 +102,6 @@ body {
   margin-top: 10px;
   color: black;
 }
-
 
 #sun-info {
   background: primary;
@@ -119,7 +118,6 @@ body {
   border: 3px solid;
   text-align: center;
 }
-
 
 /* Photo of the Day CSS */
 #container {
