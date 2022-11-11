@@ -137,8 +137,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Display the image
     document.getElementById(
-      "image_shower"
-    ).src = `./assets/POTD_images/${selected_image}`;
+      "photo"
+    ).style.backgroundImage = `url("./assets/POTD_images/${selected_image}")`;
   }
 
   get_random_image();
