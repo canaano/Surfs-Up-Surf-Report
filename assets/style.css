@@ -21,10 +21,6 @@ body {
   padding-bottom: 9px;
   margin-bottom: 20px;
 }
-/* this css will target the title where we can highlight just the words */
-/* #title {
-    background-color: black;
-} */
 
 #jumbotron h1 {
   font-weight: bold;
@@ -34,6 +30,14 @@ body {
   padding-top: 8px;
   font-weight: bold;
 }
+
+#searchbox {
+  border-radius: 10px;
+  border: 3px solid;
+  max-height: 500px;
+  min-width: 250px;
+}
+
 #forcastBoxes {
   flex: 1 1 20%;
   display: flex;
@@ -46,9 +50,6 @@ body {
   color: black;
   text-align: center;
   padding: 20px;
-  border-radius: 10px;
-  background: lightblue;
-  border: 3px solid;
   max-height: 220px;
   min-width: 250px;
 }
@@ -94,9 +95,20 @@ body {
   background: lightblue;
   border: 3px solid;
   text-align: center; 
-}*/
+}
+
+#sun-container {
+  border-radius: 10px;
+  margin-top: 10px;
+  color: black;
+}
+
+
+#sun-info {
+  background: primary;
+  color: black;
+}
 #sun-info-inner {
-  /* background: primary; */
   color: black;
   margin-right: 0px;
   margin-left: auto;
@@ -108,10 +120,6 @@ body {
   text-align: center;
 }
 
-#sun-info {
-  background: primary;
-  color: black;
-}
 
 /* Photo of the Day CSS */
 #container {
