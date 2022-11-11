@@ -66,13 +66,14 @@ body{
 #searchbox {
     border-radius: 10px;
     border: 3px solid;
-    border-radius: 10px;
     margin-top: 25px;
+    max-height: 550px;
     
 }
 
 #wave-info{
     color: black;
+    max-height: 220px;
     /* margin-top: 30px;
     margin-right: -110px;
     margin-left: auto;
@@ -82,7 +83,7 @@ body{
    #wave-info-inner{
        /* background: primary; */
        color: black;
-       margin-right: 0px;
+       margin-right: 10px;
        margin-left: auto;
        margin-bottom: 10px;
        padding: 8px;
@@ -116,11 +117,11 @@ body{
     margin-left: 200px;
 }
 
-.flex-container {
+/* .flex-container {
     display: flex;
     justify-content: center;
-    background: whitesmoke;
-}
+    background: whitesmoke; */
+/* } */
 
 
 /* #title-tide{
