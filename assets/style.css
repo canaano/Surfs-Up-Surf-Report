@@ -35,19 +35,22 @@ body{
     padding-top: 8px;
     font-weight: bold;
 }
+#forcastBoxes {
 
-/* #wave-info{
+}
+
+ #wave-info{
     background: primary;
     color: black;
-    margin-right: 10px;
+    margin-right: 25px;
     margin-left: 25px;
     margin-bottom: 10px;
     margin-top: 8px;
-    padding: 8px;
+    padding: 20px;
     border-radius: 10px;
     background: lightblue;
     border: 3px solid;
-} */
+} 
 
 
 #sun-container{
@@ -70,10 +73,10 @@ body{
 
 #wave-info{
     color: black;
-    margin-top: 30px;
+    /* margin-top: 30px;
     margin-right: -110px;
     margin-left: auto;
-    min-width:33%;
+    min-width:33%; */
    }
    
    #wave-info-inner{
@@ -123,3 +126,31 @@ body{
 /* #title-tide{
     text-align: center;
 } */
+
+/* Photo of the Day CSS */
+#container{
+    width: 500px;
+    height: 500px;
+  
+    border-radius: 5px;
+  
+  }
+  
+  #inner_container{
+    width: 500px;
+    height: 500px;
+  
+    box-shadow: 0px 0px 36px -22px #2B2D42;
+    float: left;
+    margin-bottom: 33px;
+  
+  }
+   
+  img{
+    width: 100%;
+    height: 100%;
+    /* width: 100%; */
+    /* height: 100%; */
+    border-radius: 10px;
+  
+  }
