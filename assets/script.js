@@ -39,7 +39,7 @@ $(document).ready(function() {
         searchHistoryList.innerHTML = '';
         searchHistory.forEach((city) => {
           const li = document.createElement('li');
-          li.className = 'list list-group-item';
+          li.className = 'list list-group-item col-sm-5';
           li.innerHTML = city;
           searchHistoryList.appendChild(li);
         });
