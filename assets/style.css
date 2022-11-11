@@ -1,26 +1,25 @@
-*{
-    font-family: monospace;
+* {
+  font-family: monospace;
 }
-body{
-    background-color: silver!important;
-
+body {
+  background-color: silver !important;
 }
 
 #jumbotron {
-    text-align: center;
-    /* background: linear-gradient(180deg, lightblue, whitesmoke); */
-    background-image: url(./img/header-wave.jpg);
-    background-position:center;
-    min-height: 260px;
-    background-size: cover;
-    object-fit: fill;
-    height: 50%;
-    color:black;
-    border-radius: 0;
-    border-bottom: 0.5px solid black;
-    padding-top: 20px;
-    padding-bottom: 9px;
-    margin-bottom: 20px;
+  text-align: center;
+  /* background: linear-gradient(180deg, lightblue, whitesmoke); */
+  background-image: url(./img/header-wave.jpg);
+  background-position: center;
+  min-height: 260px;
+  background-size: cover;
+  object-fit: fill;
+  height: 50%;
+  color: black;
+  border-radius: 0;
+  border-bottom: 0.5px solid black;
+  padding-top: 20px;
+  padding-bottom: 9px;
+  margin-bottom: 20px;
 }
 /* this css will target the title where we can highlight just the words */
 /* #title {
@@ -28,130 +27,90 @@ body{
 } */
 
 #jumbotron h1 {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 #searchBar {
-    padding-top: 8px;
-    font-weight: bold;
+  padding-top: 8px;
+  font-weight: bold;
 }
 #forcastBoxes {
-
 }
 
- #wave-info{
-    background: primary;
-    color: black;
-    margin-right: 25px;
-    margin-left: 25px;
-    margin-bottom: 10px;
-    margin-top: 8px;
-    padding: 20px;
-    border-radius: 10px;
-    background: lightblue;
-    border: 3px solid;
-} 
+#wave-info {
+  background: primary;
+  color: black;
+  margin-right: 25px;
+  margin-left: 25px;
+  margin-bottom: 10px;
+  margin-top: 8px;
+  padding: 20px;
+  border-radius: 10px;
+  background: lightblue;
+  border: 3px solid;
+  max-height: 220px;
+}
 
-
-#sun-container{
-    /* background:lightblue; */
-    border-radius:10px;
-    /* border: 3px solid; */
-    border-radius: 10px;
-    margin-top: 10px;
-    color: black;
-    
-    
+#sun-container {
+  /* background:lightblue; */
+  border-radius: 10px;
+  /* border: 3px solid; */
+  margin-top: 10px;
+  color: black;
 }
 #searchbox {
-    border-radius: 10px;
-    border: 3px solid;
-    margin-top: 25px;
-    max-height: 550px;
-    
+  border-radius: 10px;
+  border: 3px solid;
+  margin-top: 25px;
+  max-height: 500px;
 }
 
-#wave-info{
-    color: black;
-    max-height: 220px;
-    /* margin-top: 30px;
-    margin-right: -110px;
-    margin-left: auto;
-    min-width:33%; */
-   }
-   
-   #wave-info-inner{
-       /* background: primary; */
-       color: black;
-       margin-right: 10px;
-       margin-left: auto;
-       margin-bottom: 10px;
-       padding: 8px;
-       border-radius: 10px;
-       background: lightblue;
-       border: 3px solid;
-       text-align: center;
-   }
-   #sun-info-inner{
-       /* background: primary; */
-       color: black;
-       margin-right: 0px;
-       margin-left: auto;
-       margin-bottom: 10px;
-       padding: 8px;
-       border-radius: 10px;
-       background: lightblue;
-       border: 3px solid;
-       text-align: center;
-   }
-
-#sun-info{
-    background: primary;
-    color: black;
-    /* margin-right: -5px; */
-    margin-left: 450px;
+#wave-info-inner {
+  background: primary;
+  color: black;
+  margin-right: 10px;
+  margin-left: auto;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 10px;
+  background: lightblue;
+  border: 3px solid;
+  text-align: center;
+}
+#sun-info-inner {
+  /* background: primary; */
+  color: black;
+  margin-right: 0px;
+  margin-left: auto;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 10px;
+  background: lightblue;
+  border: 3px solid;
+  text-align: center;
 }
 
-#title-wave{
-    text-align: center;
-    margin-left: 200px;
+#sun-info {
+  background: primary;
+  color: black;
 }
-
-/* .flex-container {
-    display: flex;
-    justify-content: center;
-    background: whitesmoke; */
-/* } */
-
-
-/* #title-tide{
-    text-align: center;
-} */
 
 /* Photo of the Day CSS */
-#container{
-    width: 500px;
-    height: 500px;
-  
-    border-radius: 5px;
-  
-  }
-  
-  #inner_container{
-    width: 500px;
-    height: 500px;
-  
-    box-shadow: 0px 0px 36px -22px #2B2D42;
-    float: left;
-    margin-bottom: 33px;
-  
-  }
-   
-  img{
-    width: 100%;
-    height: 100%;
-    /* width: 100%; */
-    /* height: 100%; */
-    border-radius: 10px;
-  
-  }
+#container {
+  width: 500px;
+  height: 400px;
+  border-radius: 5px;
+}
+
+#inner_container {
+  width: 500px;
+  height: 400px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  /* width: 100%; */
+  /* height: 100%; */
+  border-radius: 10px 10px;
+}
