@@ -35,7 +35,7 @@
       </header>
       <div class="container">
         <div class="row">
-          <div class="col-sm-3 bg-light" id="searchbox">
+          <div class="col-sm-3 col-md-12 bg-light" id="searchbox">
             <!-- creating the search bar to look up cities -->
             <h4 id="searchBar">Search for a City</h4>
             <!-- create the text box to capture the search city name -->
@@ -44,19 +44,16 @@
                 <div class="input-group-append">
                   <button class="btn bg-primary text-light" id="search-button"><i class="fa fa-search"></i></button>
                 </div>
-                <ul id="search-history">
-                  <!-- dynamic list of cities from localstorage-->
-                </ul>
             </div>
          <!-- section for search city history -->
           <button class="btn btn-primary" type="button" id="clear-history">Clear History</button>
-          <ul class="list-group">
-
+          <ul id="search-history">
+            <!-- dynamic list of cities from localstorage-->
           </ul>
         </div>
 
         <!-- add box for 'photo of the day' -->
-        <div class="flex-container" id="photo">
+        <div class="col-md-5 flex-container" id="photo">
           <p>photo</p>
         </div>
 

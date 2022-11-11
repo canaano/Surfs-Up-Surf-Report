@@ -15,17 +15,22 @@ $(document).ready(function() {
 
     
     function getSearchHistory() {
-        const searchHistory = localStorage.getItem('searchHistory')
-          ? JSON.parse(localStorage.getItem('searchHistory'))
+        const searchHistory = localStorage.getItem('search-history')
+          ? JSON.parse(localStorage.getItem('search-history'))
           : [];
         const dedupedSearchHistory = [...new Set(searchHistory)];
         return dedupedSearchHistory;
       }
     
+    function clearHistory() {
+      localStorage.removeItem('search-history');
+    }
+
       function setSearchHistory(cityName) {
         const searchHistory = getSearchHistory();
         searchHistory.push(cityName);
-        localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+        localStorage.setItem('search-history', JSON.stringify(searchHistory));
+        console.log(searchHistory);
       }
 
       function buildSearchAndMountHistory() {
@@ -34,11 +39,12 @@ $(document).ready(function() {
         searchHistoryList.innerHTML = '';
         searchHistory.forEach((city) => {
           const li = document.createElement('li');
-          li.className = 'list list-group-item';
+          li.className = 'list list-group-item col-sm-5';
           li.innerHTML = city;
           searchHistoryList.appendChild(li);
         });
       }
+      buildSearchAndMountHistory();
 
     async function searchForCity(cityName) {
         try {
@@ -62,6 +68,34 @@ $(document).ready(function() {
         return response;
       }
 
+  async function performSearch(cityName) {
+    // const cityName = $('#search-input').val();
+    const latlon = await searchForCity(cityName);
+    
+    if (latlon.error) return;
+    setSearchHistory(cityName);
+    buildSearchAndMountHistory();
+
+    const forecastResult = await getForecast(latlon.lat , latlon.lon);
+    const waveHeight = "Height: "+forecastResult.data.weather[0].hourly[2].swellHeight_ft + " Ft"
+    $('#wave-height').text(waveHeight);
+    const windspeed = "Speed: "+forecastResult.data.weather[0].hourly[2].windspeedMiles + " MPH"
+    $('#wind-speed').text(windspeed);
+    const windDir = "Direction: "+forecastResult.data.weather[0].hourly[2].swellDir16Point
+    $('#windDir').text(windDir);
+    const temp = "Temperature: "+forecastResult.data.weather[0].hourly[2].tempF + " °F"
+    $('#temp').text(temp);
+    const sunrise = forecastResult.data.weather[0].astronomy[0].sunrise
+    $('#sunrise').text(sunrise);
+    const sunset = forecastResult.data.weather[0].astronomy[0].sunset 
+    $('#sunset').text(sunset);
+    console.log(forecastResult);
+  }
+    $('#clear-history').on('click', async function (e) {
+    clearHistory();
+    buildSearchAndMountHistory();
+  });
+
       $('#search-history').on('click', async function (e) {
         const cityName = e.target.innerText;
         performSearch(cityName);
@@ -69,23 +103,9 @@ $(document).ready(function() {
 
       $('#search-button').on('click', async function () {
         const cityName = $('#search-input').val();
-        const latlon = await searchForCity(cityName);
-        const forecastResult = await getForecast(latlon.lat , latlon.lon);
-        const waveHeight = "Height: "+forecastResult.data.weather[0].hourly[2].swellHeight_ft + " Ft"
-        $('#wave-height').text(waveHeight);
-        const windspeed = "Speed: "+forecastResult.data.weather[0].hourly[2].windspeedMiles + " MPH"
-        $('#wind-speed').text(windspeed);
-        const windDir = "Direction: "+forecastResult.data.weather[0].hourly[2].swellDir16Point
-        $('#windDir').text(windDir);
-        const temp = "Temperature: "+forecastResult.data.weather[0].hourly[2].tempF + " °F"
-        $('#temp').text(temp);
-        const sunrise = forecastResult.data.weather[0].astronomy[0].sunrise
-        $('#sunrise').text(sunrise);
-        const sunset = forecastResult.data.weather[0].astronomy[0].sunset 
-        $('#sunset').text(sunset);
-        console.log(forecastResult);
+      performSearch(cityName);
       });
-
+      
     });
 
     
