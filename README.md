@@ -4,6 +4,7 @@ Our application will provide users with important information such as wave heigh
 
 
 ## Screenshot of deployed website 
- ![Surf Report](./assets/img/)
+ ![Surf Report](./assets/img/deployed-site.png)
 
 ### Deployed Site 
+https://canaano.github.io/Project1/
